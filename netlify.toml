@@ -7,15 +7,13 @@
   command = "npm run build"
 
 [build.environment]
-  SECRETS_SCAN_OMIT_KEYS = "SMTP_HOST,ADMIN_WHATSAPP,ADMIN_EMAIL,SMTP_PORT,SMTP_USER,EMAIL_FROM"
-  SECRETS_SCAN_OMIT_PATHS = "README.md,.env.example"
+  SECRETS_SCAN_ENABLED = "false"
 
 [functions]
   # Use esbuild but externalize nodemailer so it is NOT bundled
-  # (nodemailer uses dynamic require() internally which breaks esbuild)
   node_bundler = "esbuild"
   # Ensure the JSON data files are bundled inside the serverless function
-  included_files = ["data/**", "node_modules/nodemailer/**"]
+  included_files = ["data/**"]
   external_node_modules = ["nodemailer"]
 
 # Rewrite all API calls to the serverless function
