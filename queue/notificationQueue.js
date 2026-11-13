@@ -122,59 +122,81 @@ async function sendEmailNotification(data) {
     </div>
   `;
 
-  if (
-    nodemailer &&
-    process.env.SMTP_HOST &&
-    process.env.SMTP_USER &&
-    process.env.SMTP_PASS
-  ) {
-    const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: Number(process.env.SMTP_PORT) === 465,
-      auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS
+  const smtpUser = String(process.env.SMTP_USER || '').trim().replace(/^["']|["']$/g, '');
+  const smtpPass = String(process.env.SMTP_PASS || '').trim().replace(/^["']|["']$/g, '');
+  const rawHost = String(process.env.SMTP_HOST || '').trim().replace(/^["']|["']$/g, '');
+  const isGmail = rawHost === 'smtp.gmail.com' || smtpUser.toLowerCase().includes('@gmail.com');
+  const smtpHost = rawHost || (isGmail ? 'smtp.gmail.com' : '');
+  const smtpPort = Number(process.env.SMTP_PORT || (isGmail ? 465 : 587));
+
+  if (nodemailer && smtpUser && smtpPass && smtpHost) {
+    try {
+      let transporterConfig;
+      if (isGmail) {
+        transporterConfig = {
+          service: 'gmail',
+          auth: {
+            user: smtpUser,
+            pass: smtpPass
+          }
+        };
+      } else {
+        transporterConfig = {
+          host: smtpHost,
+          port: smtpPort,
+          secure: smtpPort === 465,
+          auth: {
+            user: smtpUser,
+            pass: smtpPass
+          }
+        };
       }
-    });
 
-    const [customerMail, adminMail] = await Promise.all([
-      withRetry(() =>
-        transporter.sendMail({
-          from: `"Mahalaxmi Tours and Travels" <${process.env.SMTP_USER}>`,
-          replyTo: adminEmail,
-          to: email,
-          subject,
-          text: textBody,
-          html: htmlBody
-        })
-      ),
-      withRetry(() =>
-        transporter.sendMail({
-          from: `"Mahalaxmi Website Lead" <${process.env.SMTP_USER}>`,
-          replyTo: email,
-          to: adminEmail,
-          subject: adminSubject,
-          text: `New Enquiry #${enquiryId}\nName: ${name}\nEmail: ${email}\nWhatsApp: ${number}\nSource: ${source}\nDestination: ${destination}\nReply on WhatsApp: ${whatsappDirectUrl}`,
-          html: adminHtmlBody
-        })
-      )
-    ]);
+      const transporter = nodemailer.createTransport(transporterConfig);
+      console.log(`[Email] Dispatching emails via ${isGmail ? 'Gmail Service' : smtpHost} (user: ${smtpUser})...`);
 
-    console.log(`[Email] Sent confirmation to customer (${email}) & lead alert to owner (${adminEmail})`);
-    return {
-      channel: 'email',
-      provider: 'nodemailer-smtp',
-      messageId: customerMail.messageId,
-      adminMessageId: adminMail.messageId,
-      to: email,
-      adminTo: adminEmail,
-      subject,
-      preview: textBody,
-      sentAt: new Date().toISOString()
-    };
+      const [customerMail, adminMail] = await Promise.all([
+        withRetry(() =>
+          transporter.sendMail({
+            from: `"Mahalaxmi Tours and Travels" <${smtpUser}>`,
+            replyTo: adminEmail,
+            to: email,
+            subject,
+            text: textBody,
+            html: htmlBody
+          })
+        ),
+        withRetry(() =>
+          transporter.sendMail({
+            from: `"Mahalaxmi Website Lead" <${smtpUser}>`,
+            replyTo: email,
+            to: adminEmail,
+            subject: adminSubject,
+            text: `New Enquiry #${enquiryId}\nName: ${name}\nEmail: ${email}\nWhatsApp: ${number}\nSource: ${source}\nDestination: ${destination}\nReply on WhatsApp: ${whatsappDirectUrl}`,
+            html: adminHtmlBody
+          })
+        )
+      ]);
+
+      console.log(`[Email Success] Customer email ID: ${customerMail.messageId}, Admin alert ID: ${adminMail.messageId}`);
+      return {
+        channel: 'email',
+        provider: 'nodemailer-smtp',
+        messageId: customerMail.messageId,
+        adminMessageId: adminMail.messageId,
+        to: email,
+        adminTo: adminEmail,
+        subject,
+        preview: textBody,
+        sentAt: new Date().toISOString()
+      };
+    } catch (err) {
+      console.error('[Email SMTP Error]', err && err.message ? err.message : err);
+      throw err;
+    }
   }
 
+  console.warn(`[Email Notice] Running in simulated mode. Missing credentials: smtpUser=${Boolean(smtpUser)}, smtpPass=${Boolean(smtpPass)}, smtpHost=${Boolean(smtpHost)}`);
   return {
     channel: 'email',
     provider: 'simulated-email',
@@ -296,10 +318,12 @@ async function sendWhatsappNotification(data) {
 }
 
 async function initNotificationQueue() {
-  if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS) {
-    console.log(`[Notifications] Live SMTP Email enabled (${process.env.SMTP_USER} via ${process.env.SMTP_HOST}).`);
+  const user = process.env.SMTP_USER;
+  const pass = process.env.SMTP_PASS;
+  if (user && pass) {
+    console.log(`[Notifications] Live SMTP Email enabled (${user}).`);
   } else {
-    console.log(`[Notifications] Running in simulated Email mode (no SMTP_USER/SMTP_PASS found).`);
+    console.log(`[Notifications] Running in simulated Email mode (SMTP_USER or SMTP_PASS not set).`);
   }
 
   if (process.env.WHATSAPP_CLOUD_ACCESS_TOKEN && process.env.WHATSAPP_CLOUD_PHONE_NUMBER_ID) {
