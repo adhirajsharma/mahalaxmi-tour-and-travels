@@ -64,21 +64,12 @@ function initCounters() {
 }
 
 /* =========================================================
-   Floating Book Button + Header Scroll Shadow
+   Header Scroll Shadow
    ========================================================= */
 function initScrollEffects() {
-  const fab = document.getElementById('fabBook');
   const header = document.getElementById('siteHeader');
-  const hero = document.getElementById('hero');
 
   window.addEventListener('scroll', () => {
-    const heroBottom = hero ? hero.offsetHeight : 400;
-    // FAB
-    if (window.scrollY > heroBottom * 0.7) {
-      fab && fab.classList.add('visible');
-    } else {
-      fab && fab.classList.remove('visible');
-    }
     // Header shadow
     if (window.scrollY > 10) {
       header && header.classList.add('scrolled');

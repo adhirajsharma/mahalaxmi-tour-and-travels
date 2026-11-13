@@ -1023,38 +1023,6 @@ body {
 .footer-contacts a:hover { color: var(--saffron-500); }
 
 /* =========================================================
-   Floating Action Button (FAB)
-   ========================================================= */
-.fab-book {
-  position: fixed;
-  bottom: 88px;
-  right: 24px;
-  z-index: 90;
-  background: linear-gradient(135deg, var(--saffron-500), var(--orange-600));
-  color: #FFFFFF;
-  font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  padding: 13px 20px;
-  border-radius: 99px;
-  box-shadow: var(--shadow-fab);
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  opacity: 0;
-  transform: translateY(20px) scale(0.9);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-.fab-book.visible {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-  pointer-events: auto;
-}
-.fab-book:hover { transform: translateY(-3px) scale(1.03); }
-
-/* =========================================================
    Mobile Navigation
    ========================================================= */
 .mobile-menu-btn {
@@ -1181,7 +1149,6 @@ body {
   .mobile-menu-btn { display: flex; }
   .main-nav { display: none !important; }
   .mobile-action-bar { display: flex; }
-  .fab-book { bottom: 86px; right: 16px; }
 
   .nav-inner { height: 64px; }
 
