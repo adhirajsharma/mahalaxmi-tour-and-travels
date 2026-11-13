@@ -76,7 +76,7 @@ function buildCustomGreetingMessage({ enquiryId, name, number, email, source, de
  */
 async function sendEmailNotification(data) {
   const { enquiryId, name, email, number, source, destination, whatsappDirectUrl } = data;
-  const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER || 'adhirajait26@gmail.com';
+  const adminEmail = process.env.ADMIN_EMAIL || process.env.SMTP_USER || 'admin@example.com';
   const subject = `Thank You for Enquiring (#${enquiryId}) — Mahalaxmi Tours and Travels`;
   const textBody = buildCustomGreetingMessage(data);
 

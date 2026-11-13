@@ -70,7 +70,7 @@ Open `.env` and fill in your details:
 PORT=3000
 
 # Gmail SMTP for Email Notifications
-SMTP_HOST=smtp.gmail.com
+SMTP_HOST=smtp.example.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
 SMTP_PASS=your_gmail_app_password
@@ -80,7 +80,7 @@ ADMIN_EMAIL=your_email@gmail.com
 # Meta WhatsApp Cloud API (Optional - direct wa.me link works without this)
 WHATSAPP_CLOUD_ACCESS_TOKEN=
 WHATSAPP_CLOUD_PHONE_NUMBER_ID=
-ADMIN_WHATSAPP=919356891309
+ADMIN_WHATSAPP=91XXXXXXXXXX
 ```
 
 > **Note on Gmail SMTP**: Use a **Google App Password** (not your regular Gmail password). Generate one at [Google Account Security -> 2-Step Verification -> App Passwords](https://myaccount.google.com/apppasswords).
@@ -143,12 +143,12 @@ This project includes a pre-configured `netlify.toml` and serverless function (`
 6. **Set Environment Variables**:
    - Before deploying, click **"Add environment variables"** (or navigate to **Site configuration > Environment variables** after creation).
    - Add the following keys (from your `.env`):
-     - `SMTP_HOST`: `smtp.gmail.com`
+     - `SMTP_HOST`: `your_smtp_host` (e.g. your SMTP host)
      - `SMTP_PORT`: `587`
      - `SMTP_USER`: `your_email@gmail.com`
      - `SMTP_PASS`: `your_gmail_app_password`
      - `ADMIN_EMAIL`: `your_email@gmail.com`
-     - `ADMIN_WHATSAPP`: `919356891309`
+     - `ADMIN_WHATSAPP`: `91XXXXXXXXXX` (your WhatsApp number)
      - `WHATSAPP_CLOUD_ACCESS_TOKEN`: *(optional)*
      - `WHATSAPP_CLOUD_PHONE_NUMBER_ID`: *(optional)*
 7. Click **"Deploy site"**.
