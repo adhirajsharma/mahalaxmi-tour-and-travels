@@ -10,26 +10,6 @@
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <!-- Top Contact Bar: WhatsApp, Email & Office Location -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <div class="top-bar-left">
-        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="top-contact-item" id="topWhatsapp">
-          💬 WhatsApp: +918871724435
-        </a>
-        <span class="top-sep">|</span>
-        <a href="mailto:pravin361f@gmail.com" class="top-contact-item" id="topEmail">
-          ✉️ pravin361f@gmail.com
-        </a>
-      </div>
-      <div class="top-bar-right">
-        <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="top-contact-item" id="topLocation">
-          📍 AM-18, DD Nagar, Gwalior, MP ↗
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- Sticky Header -->
   <header class="site-header">
     <div class="container nav-inner">
@@ -45,14 +25,11 @@
         <a href="#cars">Car Listing</a>
         <a href="#reviews">Reviews</a>
         <a href="#enquiry">Enquiry</a>
-        <a href="#location">Office Location</a>
+        <a href="#location">Contact Us</a>
       </nav>
 
       <div class="nav-actions">
-        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp-sm desktop-only">
-          💬 WhatsApp
-        </a>
-        <a href="#enquiry" class="btn-primary-sm">Enquiry</a>
+        <a href="#enquiry" class="btn-primary-sm">Book a Cab</a>
         <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
           <span></span>
           <span></span>
@@ -66,16 +43,11 @@
       <a href="#cars" class="mobile-nav-link">🚗 Car Listing &amp; Tariff</a>
       <a href="#reviews" class="mobile-nav-link">⭐ Customer Reviews</a>
       <a href="#enquiry" class="mobile-nav-link">📝 Send Booking Enquiry</a>
-      <a href="#location" class="mobile-nav-link">📍 Office Location &amp; Contact</a>
-      <div class="mobile-drawer-cta">
-        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp full-width">
-          💬 WhatsApp: +918871724435
-        </a>
-      </div>
+      <a href="#location" class="mobile-nav-link">📍 Contact Details &amp; Location</a>
     </div>
   </header>
 
-  <!-- Hero Banner with Quick Contact Highlights -->
+  <!-- Hero Banner -->
   <section class="hero">
     <div class="container hero-inner">
       <span class="hero-badge">Reliable Cab &amp; Travel Partner</span>
@@ -83,22 +55,13 @@
         Mahalaxmi Tours and Travels
       </h1>
       <p class="hero-description">
-        Clean, comfortable AC cars with transparent per-kilometer pricing and no hidden charges.
+        Clean, comfortable AC cars with transparent per-kilometer pricing and no hidden charges. Serving Gwalior and all major outstation destinations.
       </p>
 
-      <div class="hero-contact-strip">
-        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="contact-chip whatsapp-chip">
-          <span>💬 WhatsApp Us</span>
-          <strong id="heroWhatsapp">+918871724435</strong>
-        </a>
-        <a href="mailto:pravin361f@gmail.com" class="contact-chip">
-          <span>✉️ Email Address</span>
-          <strong id="heroEmail">pravin361f@gmail.com</strong>
-        </a>
-        <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="contact-chip">
-          <span>📍 Office Location</span>
-          <strong id="heroLocation">AM-18, DD Nagar, Gwalior, MP ↗</strong>
-        </a>
+      <div class="hero-cta-group">
+        <a href="#cars" class="btn-primary">View Car Fleet &amp; Tariff →</a>
+        <a href="#enquiry" class="btn-outline-hero">Send Trip Enquiry</a>
+        <a href="#location" class="btn-ghost-hero">Contact Details &amp; Location ↓</a>
       </div>
     </div>
   </section>
@@ -401,22 +364,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Floating Mobile Quick Action Bar (Visible only on mobile devices) -->
-  <aside class="mobile-bottom-bar" aria-label="Quick contact actions">
-    <a href="tel:+918871724435" class="mobile-bar-btn call-btn">
-      <span class="bar-icon">📞</span>
-      <span class="bar-label">Call Now</span>
-    </a>
-    <a href="https://wa.me/918871724435?text=Hello%20Mahalaxmi%20Tours%20and%20Travels,%20I%20want%20to%20enquire%20about%20a%20cab%20booking." target="_blank" rel="noopener" class="mobile-bar-btn wa-btn">
-      <span class="bar-icon">💬</span>
-      <span class="bar-label">WhatsApp</span>
-    </a>
-    <a href="#enquiry" class="mobile-bar-btn enquire-btn">
-      <span class="bar-icon">📝</span>
-      <span class="bar-label">Book Cab</span>
-    </a>
-  </aside>
 
   <script src="/app.js"></script>
 </body>

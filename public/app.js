@@ -34,15 +34,26 @@ function renderBrandInfo(brand) {
     brand.officeMapUrl ||
     'https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D';
 
-  const heroWa = document.getElementById('heroWhatsapp');
-  const heroEmail = document.getElementById('heroEmail');
   const officeAddr = document.getElementById('officeAddressText');
+  const officeWa = document.getElementById('officeWhatsappLink');
+  const officePhone = document.getElementById('officePhoneLink');
+  const officeEmail = document.getElementById('officeEmailLink');
 
-  if (heroWa) heroWa.textContent = waNum;
-  if (heroEmail) heroEmail.textContent = email;
   if (officeAddr) {
     officeAddr.href = mapUrl;
     officeAddr.textContent = `${locText} ↗`;
+  }
+  if (officeWa) {
+    officeWa.href = `https://wa.me/${waNum.replace(/\D/g, '')}`;
+    officeWa.textContent = waNum;
+  }
+  if (officePhone) {
+    officePhone.href = `tel:${waNum}`;
+    officePhone.textContent = waNum;
+  }
+  if (officeEmail) {
+    officeEmail.href = `mailto:${email}`;
+    officeEmail.textContent = email;
   }
 }
 
