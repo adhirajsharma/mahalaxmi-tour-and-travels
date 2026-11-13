@@ -1,3 +1,8 @@
+// Ensure nodemailer is explicitly bundled by Netlify esbuild
+try {
+  require('nodemailer');
+} catch (_) {}
+
 const {
   buildGetDataResponse,
   processPostEnquiry,

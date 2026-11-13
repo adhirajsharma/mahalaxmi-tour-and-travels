@@ -1,14 +1,11 @@
 // Direct Async Notification Service (Email via Nodemailer & WhatsApp via Meta Official Cloud API)
 // Optimized for up to 100 daily users.
-function optionalRequire(pkg) {
-  try {
-    return require(pkg);
-  } catch (_) {
-    return null;
-  }
+let nodemailer = null;
+try {
+  nodemailer = require('nodemailer');
+} catch (err) {
+  console.error('[Nodemailer Load Error]', err && err.message ? err.message : err);
 }
-
-const nodemailer = optionalRequire('nodemailer');
 
 const DAILY_USER_LIMIT = 100;
 const recentEnquiries = [];
@@ -196,7 +193,7 @@ async function sendEmailNotification(data) {
     }
   }
 
-  console.warn(`[Email Notice] Running in simulated mode. Missing credentials: smtpUser=${Boolean(smtpUser)}, smtpPass=${Boolean(smtpPass)}, smtpHost=${Boolean(smtpHost)}`);
+  console.warn(`[Email Notice] Running in simulated mode. Missing credentials: nodemailer=${Boolean(nodemailer)}, smtpUser=${Boolean(smtpUser)}, smtpPass=${Boolean(smtpPass)}, smtpHost=${Boolean(smtpHost)}`);
   return {
     channel: 'email',
     provider: 'simulated-email',
