@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mahalaxmi Tours and Travels | Car Listing, Reviews, Enquiry &amp; Office Location</title>
+  <title>Mahalaxmi Tours and Travels | Cab Rental, Gwalior</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+
   <!-- Sticky Header -->
-  <header class="site-header">
+  <header class="site-header" id="siteHeader">
     <div class="container nav-inner">
       <a href="#" class="brand-logo">
         <div class="brand-icon">🚖</div>
@@ -22,54 +23,97 @@
       </a>
 
       <nav class="main-nav" id="mainNav">
-        <a href="#cars">Car Listing</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#enquiry">Enquiry</a>
-        <a href="#location">Contact Us</a>
+        <a href="#cars" class="nav-link">Fleet</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#enquiry" class="nav-link">Enquiry</a>
+        <a href="#location" class="nav-link">Contact</a>
       </nav>
 
       <div class="nav-actions">
         <a href="#enquiry" class="btn-primary-sm">Book a Cab</a>
         <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
-          <span></span>
-          <span></span>
-          <span></span>
+          <span></span><span></span><span></span>
         </button>
       </div>
     </div>
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
-      <a href="#cars" class="mobile-nav-link">🚗 Car Listing &amp; Tariff</a>
+      <a href="#cars" class="mobile-nav-link">🚗 Car Fleet &amp; Tariff</a>
       <a href="#reviews" class="mobile-nav-link">⭐ Customer Reviews</a>
-      <a href="#enquiry" class="mobile-nav-link">📝 Send Booking Enquiry</a>
-      <a href="#location" class="mobile-nav-link">📍 Contact Details &amp; Location</a>
+      <a href="#enquiry" class="mobile-nav-link">📝 Book a Cab</a>
+      <a href="#location" class="mobile-nav-link">📍 Contact &amp; Location</a>
     </div>
   </header>
 
   <!-- Hero Banner -->
-  <section class="hero">
+  <section class="hero" id="hero">
+    <div class="hero-bg-overlay"></div>
     <div class="container hero-inner">
-      <span class="hero-badge">Reliable Cab &amp; Travel Partner</span>
-      <h1 class="hero-title">
-        Mahalaxmi Tours and Travels
+      <span class="hero-badge reveal-up">✦ Gwalior's Trusted Cab Partner</span>
+      <h1 class="hero-title reveal-up delay-1">
+        Travel Comfortably.<br>
+        <span class="hero-title-accent">Pay Only Per KM.</span>
       </h1>
-      <p class="hero-description">
-        Clean, comfortable AC cars with transparent per-kilometer pricing and no hidden charges. Serving Gwalior and all major outstation destinations.
+      <p class="hero-description reveal-up delay-2">
+        AC cabs from Gwalior to any destination — no hidden charges, transparent pricing, available 24×7.
       </p>
 
-      <div class="hero-cta-group">
-        <a href="#cars" class="btn-primary">View Car Fleet &amp; Tariff →</a>
-        <a href="#enquiry" class="btn-outline-hero">Send Trip Enquiry</a>
-        <a href="#location" class="btn-ghost-hero">Contact Details &amp; Location ↓</a>
+      <!-- Stats Strip -->
+      <div class="hero-stats reveal-up delay-3">
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="500">0</span><span>+</span>
+          <span class="hero-stat-label">Happy Trips</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="6">0</span>
+          <span class="hero-stat-label">Car Options</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num" data-count="100">0</span><span>%</span>
+          <span class="hero-stat-label">AC Vehicles</span>
+        </div>
+        <div class="hero-stat-sep"></div>
+        <div class="hero-stat">
+          <span>24</span><span class="hero-stat-label-inline">/7</span>
+          <span class="hero-stat-label">Available</span>
+        </div>
       </div>
+
+      <div class="hero-cta-group reveal-up delay-4">
+        <a href="#cars" class="btn-primary hero-btn">View Car Fleet →</a>
+        <a href="#enquiry" class="btn-outline-hero">Send Trip Enquiry</a>
+        <a href="#location" class="btn-ghost-hero">Contact &amp; Location ↓</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <div class="scroll-dot"></div>
     </div>
   </section>
 
-  <!-- 1. Car Listing Section -->
+  <!-- Trust Bar -->
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item">❄️ Full AC</div>
+      <div class="trust-sep">·</div>
+      <div class="trust-item">📍 GPS Tracked</div>
+      <div class="trust-sep">·</div>
+      <div class="trust-item">💰 No Hidden Charges</div>
+      <div class="trust-sep">·</div>
+      <div class="trust-item">🕐 24×7 Available</div>
+      <div class="trust-sep">·</div>
+      <div class="trust-item">👨‍✈️ Expert Drivers</div>
+    </div>
+  </div>
+
+  <!-- 1. Car Fleet Section -->
   <section class="section" id="cars">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header reveal-up">
         <div>
           <span class="eyebrow">OUR FLEET</span>
           <h2 class="section-title">Car Listing &amp; Per-KM Tariff</h2>
@@ -83,26 +127,32 @@
         </div>
       </div>
 
+      <!-- Skeleton loaders (shown while fetching) -->
       <div class="cars-grid" id="carsGrid">
-        <!-- Populated dynamically via GET /api/data -->
+        <div class="car-skeleton"></div>
+        <div class="car-skeleton"></div>
+        <div class="car-skeleton"></div>
       </div>
     </div>
   </section>
 
-  <!-- 2. Customer Reviews + Post a Review Section -->
+  <!-- 2. Reviews Section -->
   <section class="section section-alt" id="reviews">
     <div class="container">
-      <div class="section-header-center">
+      <div class="section-header-center reveal-up">
         <span class="eyebrow">CUSTOMER REVIEWS</span>
-        <h2 class="section-title">What Travelers Say About Us</h2>
+        <h2 class="section-title">What Travelers Say</h2>
+        <p class="section-subtitle">Real experiences from real customers across India</p>
       </div>
 
       <div class="reviews-grid" id="reviewsGrid">
-        <!-- Populated dynamically via GET /api/data -->
+        <div class="review-skeleton"></div>
+        <div class="review-skeleton"></div>
+        <div class="review-skeleton"></div>
       </div>
 
-      <!-- Post a Review Form Card -->
-      <div class="post-review-wrapper">
+      <!-- Post a Review -->
+      <div class="post-review-wrapper reveal-up">
         <div class="post-review-card">
           <div class="post-review-header">
             <div>
@@ -110,12 +160,12 @@
               <h3>Post a Review</h3>
             </div>
             <a
-              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z"
               target="_blank"
               rel="noopener"
               class="btn-outline"
             >
-              ⭐ Also Rate Us on Google Maps ↗
+              ⭐ Rate on Google Maps ↗
             </a>
           </div>
 
@@ -123,48 +173,56 @@
             <div class="form-row-3">
               <div class="form-group">
                 <label for="revName">Your Name <span class="req">*</span></label>
-                <input type="text" id="revName" placeholder="e.g. Amit Sharma" required />
+                <input type="text" id="revName" placeholder="e.g. Amit Sharma" autocomplete="name" required />
               </div>
 
               <div class="form-group">
                 <label for="revCity">Your City</label>
-                <input type="text" id="revCity" placeholder="e.g. Gwalior" />
+                <input type="text" id="revCity" placeholder="e.g. Gwalior" autocomplete="address-level2" />
               </div>
 
               <div class="form-group">
-                <label for="revCar">Car Booked &amp; Rating</label>
-                <div class="car-rating-row">
-                  <select id="revCar">
-                    <option value="Swift Dzire (₹12/KM)">Swift Dzire (₹12/KM)</option>
-                    <option value="Hyundai Aura (₹12/KM)">Hyundai Aura (₹12/KM)</option>
-                    <option value="Ertiga (₹15/KM)">Ertiga (₹15/KM)</option>
-                    <option value="Kia Carens (₹16/KM)">Kia Carens (₹16/KM)</option>
-                    <option value="Toyota Innova Crysta (₹20/KM)">Innova Crysta (₹20/KM)</option>
-                    <option value="Force Urbania (₹35/KM)">Force Urbania (₹35/KM)</option>
-                  </select>
-                  <select id="revRating" aria-label="Star Rating">
-                    <option value="5">★★★★★ (5)</option>
-                    <option value="4">★★★★☆ (4)</option>
-                    <option value="3">★★★☆☆ (3)</option>
-                  </select>
-                </div>
+                <label for="revCar">Car Used</label>
+                <select id="revCar">
+                  <option value="Swift Dzire (₹12/KM)">Swift Dzire (₹12/KM)</option>
+                  <option value="Hyundai Aura (₹12/KM)">Hyundai Aura (₹12/KM)</option>
+                  <option value="Ertiga (₹15/KM)">Ertiga (₹15/KM)</option>
+                  <option value="Kia Carens (₹16/KM)">Kia Carens (₹16/KM)</option>
+                  <option value="Toyota Innova Crysta (₹20/KM)">Innova Crysta (₹20/KM)</option>
+                  <option value="Force Urbania (₹35/KM)">Force Urbania (₹35/KM)</option>
+                </select>
               </div>
+            </div>
+
+            <!-- Interactive Star Rating -->
+            <div class="form-group">
+              <label>Your Rating <span class="req">*</span></label>
+              <div class="star-picker" id="starPicker" role="group" aria-label="Rating">
+                <button type="button" class="star-btn" data-val="1" aria-label="1 star">★</button>
+                <button type="button" class="star-btn" data-val="2" aria-label="2 stars">★</button>
+                <button type="button" class="star-btn active" data-val="3" aria-label="3 stars">★</button>
+                <button type="button" class="star-btn active" data-val="4" aria-label="4 stars">★</button>
+                <button type="button" class="star-btn active" data-val="5" aria-label="5 stars">★</button>
+              </div>
+              <input type="hidden" id="revRating" value="5" />
             </div>
 
             <div class="form-group">
               <label for="revComment">Your Review <span class="req">*</span></label>
               <textarea
                 id="revComment"
-                rows="2"
+                rows="3"
                 placeholder="Share your experience with our cab and driver…"
+                maxlength="400"
                 required
               ></textarea>
+              <div class="char-counter"><span id="revCharCount">0</span>/400</div>
             </div>
 
             <div id="reviewFeedback" class="form-feedback hidden"></div>
 
             <button type="submit" class="btn-primary" id="submitReviewBtn">
-              Post Review on Website
+              Post Review →
             </button>
           </form>
         </div>
@@ -172,16 +230,18 @@
     </div>
   </section>
 
-  <!-- 3. Enquiry Section (POST /api/enquiry: Name, Email, Number, Source, Destination -> Email & WhatsApp) -->
+  <!-- 3. Enquiry Section -->
   <section class="section" id="enquiry">
     <div class="container">
       <div class="enquiry-wrapper">
-        <div class="enquiry-card">
-          <span class="eyebrow">QUICK ENQUIRY</span>
-          <h2 class="section-title">Send an Enquiry</h2>
-          <p class="section-subtitle">
-            Enter your <strong>Name</strong>, <strong>Email</strong>, <strong>WhatsApp Number</strong>, <strong>Source</strong>, and <strong>Destination</strong> below. We will send you an instant confirmation on <strong>WhatsApp</strong> and <strong>Email</strong>.
-          </p>
+        <div class="enquiry-card reveal-up">
+          <div class="enquiry-card-header">
+            <span class="eyebrow">QUICK BOOKING</span>
+            <h2 class="section-title">Send an Enquiry</h2>
+            <p class="section-subtitle">
+              Fill in your details and we'll confirm your trip via <strong>WhatsApp</strong> and <strong>Email</strong> instantly.
+            </p>
+          </div>
 
           <form id="enquiryForm" novalidate>
             <div class="form-group">
@@ -191,8 +251,10 @@
                 id="inputName"
                 name="name"
                 placeholder="Enter your full name"
+                autocomplete="name"
                 required
               />
+              <div class="field-error" id="errName"></div>
             </div>
 
             <div class="form-row-2">
@@ -202,9 +264,11 @@
                   type="email"
                   id="inputEmail"
                   name="email"
-                  placeholder="Enter your email address"
+                  placeholder="yourname@gmail.com"
+                  autocomplete="email"
                   required
                 />
+                <div class="field-error" id="errEmail"></div>
               </div>
 
               <div class="form-group">
@@ -213,33 +277,39 @@
                   type="tel"
                   id="inputNumber"
                   name="number"
-                  placeholder="Enter 10-digit WhatsApp number"
+                  placeholder="10-digit mobile number"
+                  autocomplete="tel"
                   required
                 />
+                <div class="field-error" id="errNumber"></div>
               </div>
             </div>
 
             <div class="form-row-2">
               <div class="form-group">
-                <label for="inputSource">Source (Pickup Location) <span class="req">*</span></label>
+                <label for="inputSource">Pickup Location <span class="req">*</span></label>
                 <input
                   type="text"
                   id="inputSource"
                   name="source"
                   placeholder="e.g. DD Nagar, Gwalior"
+                  autocomplete="address-line1"
                   required
                 />
+                <div class="field-error" id="errSource"></div>
               </div>
 
               <div class="form-group">
-                <label for="inputDestination">Destination (Drop Location) <span class="req">*</span></label>
+                <label for="inputDestination">Drop Location <span class="req">*</span></label>
                 <input
                   type="text"
                   id="inputDestination"
                   name="destination"
                   placeholder="e.g. Agra / Delhi / Ujjain"
+                  autocomplete="address-line2"
                   required
                 />
+                <div class="field-error" id="errDestination"></div>
               </div>
             </div>
 
@@ -247,8 +317,8 @@
 
             <div id="whatsappDispatchBox" class="wa-dispatch-box hidden">
               <div class="wa-dispatch-header">
-                <strong>💬 WhatsApp &amp; Email Confirmation Sent to <span id="waTargetNumber"></span></strong>
-                <span class="wa-badge" id="waJobBadge">Sent ✓</span>
+                <strong>💬 Sent to <span id="waTargetNumber"></span></strong>
+                <span class="wa-badge">Sent ✓</span>
               </div>
               <pre class="wa-preview-text" id="waPreviewText"></pre>
               <a
@@ -258,12 +328,13 @@
                 id="waDirectOpenBtn"
                 class="btn-whatsapp full-width"
               >
-                💬 Open Message on WhatsApp Now ↗
+                💬 Open on WhatsApp ↗
               </a>
             </div>
 
-            <button type="submit" class="btn-primary full-width" id="submitEnquiryBtn">
-              Submit Enquiry &amp; Send WhatsApp + Email
+            <button type="submit" class="btn-primary full-width submit-btn" id="submitEnquiryBtn">
+              <span class="btn-label">Send Enquiry &amp; Confirm via WhatsApp + Email</span>
+              <span class="btn-spinner hidden" aria-hidden="true"></span>
             </button>
           </form>
         </div>
@@ -271,22 +342,22 @@
     </div>
   </section>
 
-  <!-- 4. Office Location & Contact Section -->
+  <!-- 4. Location & Contact Section -->
   <section class="section section-alt" id="location">
     <div class="container">
-      <div class="section-header-center">
+      <div class="section-header-center reveal-up">
         <span class="eyebrow">VISIT OR CONTACT US</span>
-        <h2 class="section-title">Office Location &amp; Contact Details</h2>
+        <h2 class="section-title">Office Location &amp; Contact</h2>
       </div>
 
       <div class="location-grid">
-        <div class="location-info-card">
+        <div class="location-info-card reveal-left">
           <div class="contact-detail-block">
             <div class="detail-icon">📍</div>
             <div>
-              <h3>Office Location</h3>
+              <h3>Office Address</h3>
               <p>
-                <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" id="officeAddressText">
+                <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z" target="_blank" rel="noopener" id="officeAddressText">
                   AM-18, DD Nagar (Deendayal Nagar), In front of Bhadouriya Ground, Near Mangal Bhawan, Gwalior, Madhya Pradesh ↗
                 </a>
               </p>
@@ -296,7 +367,7 @@
           <div class="contact-detail-block">
             <div class="detail-icon">💬</div>
             <div>
-              <h3>WhatsApp &amp; Helpline Number</h3>
+              <h3>WhatsApp &amp; Helpline</h3>
               <p>
                 <a href="https://wa.me/918871724435" target="_blank" rel="noopener" id="officeWhatsappLink">+918871724435</a>
                 <span class="muted-sep">/</span>
@@ -309,39 +380,32 @@
             <div class="detail-icon">✉️</div>
             <div>
               <h3>Email Address</h3>
-              <p>
-                <a href="mailto:pravin361f@gmail.com" id="officeEmailLink">pravin361f@gmail.com</a>
-              </p>
+              <p><a href="mailto:pravin361f@gmail.com" id="officeEmailLink">pravin361f@gmail.com</a></p>
             </div>
           </div>
 
           <div class="location-cta-row">
-            <a
-              href="https://wa.me/918871724435"
-              target="_blank"
-              rel="noopener"
-              class="btn-whatsapp full-width"
-            >
-              💬 Chat on WhatsApp (+918871724435)
+            <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp full-width">
+              💬 Chat on WhatsApp
             </a>
             <a
-              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D"
+              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z"
               target="_blank"
               rel="noopener"
               class="btn-outline full-width"
             >
-              🗺️ Open Office Location in Google Maps
+              🗺️ Open in Google Maps
             </a>
           </div>
         </div>
 
-        <div class="location-map-card">
+        <div class="location-map-card reveal-right">
           <iframe
-            title="Mahalaxmi Tours and Travels Office Location — Gwalior, Madhya Pradesh"
+            title="Mahalaxmi Tours and Travels Office Location"
             src="https://www.google.com/maps?q=26.2566343,78.2131111+(Mahalaxmi+tours+and+travels)&z=17&output=embed"
             width="100%"
             height="100%"
-            style="border:0; min-height: 340px;"
+            style="border:0; min-height: 360px;"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -351,11 +415,12 @@
     </div>
   </section>
 
-  <!-- Minimal Footer -->
+  <!-- Footer -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div>
-        <strong>Mahalaxmi Tours and Travels</strong> · <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:#FBBF24; text-decoration:none;">📍 AM-18, DD Nagar, Gwalior, MP ↗</a>
+        <strong>Mahalaxmi Tours and Travels</strong> ·
+        <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z" target="_blank" rel="noopener" style="color:#FBBF24; text-decoration:none;">📍 AM-18, DD Nagar, Gwalior, MP ↗</a>
       </div>
       <div class="footer-contacts">
         <a href="https://wa.me/918871724435" target="_blank" rel="noopener">WhatsApp: +918871724435</a>
@@ -364,6 +429,18 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Book a Cab button (appears after scrolling past hero) -->
+  <a href="#enquiry" class="fab-book" id="fabBook" aria-label="Book a Cab">
+    🚖 Book a Cab
+  </a>
+
+  <!-- Mobile Bottom Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="tel:+918871724435" class="mob-action-btn">📞 Call</a>
+    <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="mob-action-btn mob-whatsapp">💬 WhatsApp</a>
+    <a href="#enquiry" class="mob-action-btn mob-book">🚖 Book Cab</a>
+  </div>
 
   <script src="/app.js"></script>
 </body>
