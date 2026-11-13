@@ -190,6 +190,11 @@ function renderCars() {
     return;
   }
 
+  // Use brand number from API if available, else fallback
+  const waNum = (state.brand && state.brand.whatsappNumber)
+    ? state.brand.whatsappNumber.replace(/\D/g, '')
+    : '918871724435';
+
   grid.innerHTML = filtered
     .map(
       (car) => `
@@ -212,7 +217,7 @@ function renderCars() {
 
           <div class="car-actions">
             <a
-              href="https://wa.me/918871724435?text=${encodeURIComponent('Hello Mahalaxmi Tours and Travels, I want to enquire about ' + car.name + ' (₹' + car.ratePerKm + '/KM).')}"
+              href="https://wa.me/${waNum}?text=${encodeURIComponent('Hello Mahalaxmi Tours and Travels, I want to enquire about ' + car.name + ' (₹' + car.ratePerKm + '/KM).')}"
               target="_blank"
               rel="noopener"
               class="btn-outline"
@@ -590,7 +595,7 @@ function initEnquiryForm() {
         if (el) el.textContent = '';
       });
     } catch (err) {
-      feedback.textContent = '⚠️ Network error. Please try again or WhatsApp us at +918871724435.';
+      feedback.textContent = '⚠️ Network error. Please try again or use the WhatsApp / Call button at the bottom of the page.';
       feedback.className = 'form-feedback error';
       feedback.classList.remove('hidden');
     } finally {
