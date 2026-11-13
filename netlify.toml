@@ -1,0 +1,45 @@
+[build]
+  # Directory with static files to serve
+  publish = "public"
+  # Directory where Netlify Functions live
+  functions = "netlify/functions"
+  # Build command (not needed for plain static HTML/CSS/JS, but good for Netlify CI)
+  command = "npm run build"
+
+[functions]
+  # Fast and reliable modern bundler
+  node_bundler = "esbuild"
+  # Ensure the JSON data files are bundled inside the serverless function
+  included_files = ["data/**"]
+
+# Rewrite all API calls to the serverless function
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Client-side fallback to index.html for smooth navigation
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Security and caching headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"

@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahalaxmi Tours and Travels | Car Listing, Reviews, Enquiry &amp; Office Location</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- Top Contact Bar: WhatsApp, Email & Office Location -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="top-contact-item" id="topWhatsapp">
+          💬 WhatsApp: +918871724435
+        </a>
+        <span class="top-sep">|</span>
+        <a href="mailto:pravin361f@gmail.com" class="top-contact-item" id="topEmail">
+          ✉️ pravin361f@gmail.com
+        </a>
+      </div>
+      <div class="top-bar-right">
+        <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="top-contact-item" id="topLocation">
+          📍 AM-18, DD Nagar, Gwalior, MP ↗
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">🚖</div>
+        <div class="brand-text">
+          <span class="brand-title">Mahalaxmi</span>
+          <span class="brand-subtitle">Tours and Travels</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#cars">Car Listing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#enquiry">Enquiry</a>
+        <a href="#location">Office Location</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp-sm">
+          💬 WhatsApp
+        </a>
+        <a href="#enquiry" class="btn-primary-sm">Send Enquiry</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banner with Quick Contact Highlights -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="hero-badge">Reliable Cab &amp; Travel Partner</span>
+      <h1 class="hero-title">
+        Mahalaxmi Tours and Travels
+      </h1>
+      <p class="hero-description">
+        Clean, comfortable AC cars with transparent per-kilometer pricing and no hidden charges.
+      </p>
+
+      <div class="hero-contact-strip">
+        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="contact-chip whatsapp-chip">
+          <span>💬 WhatsApp Us</span>
+          <strong id="heroWhatsapp">+918871724435</strong>
+        </a>
+        <a href="mailto:pravin361f@gmail.com" class="contact-chip">
+          <span>✉️ Email Address</span>
+          <strong id="heroEmail">pravin361f@gmail.com</strong>
+        </a>
+        <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" class="contact-chip">
+          <span>📍 Office Location</span>
+          <strong id="heroLocation">AM-18, DD Nagar, Gwalior, MP ↗</strong>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 1. Car Listing Section -->
+  <section class="section" id="cars">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="eyebrow">OUR FLEET</span>
+          <h2 class="section-title">Car Listing &amp; Per-KM Tariff</h2>
+        </div>
+
+        <div class="filter-tabs" id="carFilterTabs">
+          <button type="button" class="filter-tab active" data-category="all">All Cars</button>
+          <button type="button" class="filter-tab" data-category="sedan">Sedans (4+1)</button>
+          <button type="button" class="filter-tab" data-category="suv">MUV &amp; SUV (6+1)</button>
+          <button type="button" class="filter-tab" data-category="van">Luxury Van (16+1)</button>
+        </div>
+      </div>
+
+      <div class="cars-grid" id="carsGrid">
+        <!-- Populated dynamically via GET /api/data -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Customer Reviews + Post a Review Section -->
+  <section class="section section-alt" id="reviews">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">CUSTOMER REVIEWS</span>
+        <h2 class="section-title">What Travelers Say About Us</h2>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Populated dynamically via GET /api/data -->
+      </div>
+
+      <!-- Post a Review Form Card -->
+      <div class="post-review-wrapper">
+        <div class="post-review-card">
+          <div class="post-review-header">
+            <div>
+              <span class="eyebrow">SHARE YOUR EXPERIENCE</span>
+              <h3>Post a Review</h3>
+            </div>
+            <a
+              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener"
+              class="btn-outline"
+            >
+              ⭐ Also Rate Us on Google Maps ↗
+            </a>
+          </div>
+
+          <form id="reviewForm" novalidate>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="revName">Your Name <span class="req">*</span></label>
+                <input type="text" id="revName" placeholder="e.g. Amit Sharma" required />
+              </div>
+
+              <div class="form-group">
+                <label for="revCity">Your City</label>
+                <input type="text" id="revCity" placeholder="e.g. Gwalior" />
+              </div>
+
+              <div class="form-group">
+                <label for="revCar">Car Booked &amp; Rating</label>
+                <div class="car-rating-row">
+                  <select id="revCar">
+                    <option value="Swift Dzire (₹12/KM)">Swift Dzire (₹12/KM)</option>
+                    <option value="Hyundai Aura (₹12/KM)">Hyundai Aura (₹12/KM)</option>
+                    <option value="Ertiga (₹15/KM)">Ertiga (₹15/KM)</option>
+                    <option value="Kia Carens (₹16/KM)">Kia Carens (₹16/KM)</option>
+                    <option value="Toyota Innova Crysta (₹20/KM)">Innova Crysta (₹20/KM)</option>
+                    <option value="Force Urbania (₹35/KM)">Force Urbania (₹35/KM)</option>
+                  </select>
+                  <select id="revRating" aria-label="Star Rating">
+                    <option value="5">★★★★★ (5)</option>
+                    <option value="4">★★★★☆ (4)</option>
+                    <option value="3">★★★☆☆ (3)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="revComment">Your Review <span class="req">*</span></label>
+              <textarea
+                id="revComment"
+                rows="2"
+                placeholder="Share your experience with our cab and driver…"
+                required
+              ></textarea>
+            </div>
+
+            <div id="reviewFeedback" class="form-feedback hidden"></div>
+
+            <button type="submit" class="btn-primary" id="submitReviewBtn">
+              Post Review on Website
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Enquiry Section (POST /api/enquiry: Name, Email, Number, Source, Destination -> Email & WhatsApp) -->
+  <section class="section" id="enquiry">
+    <div class="container">
+      <div class="enquiry-wrapper">
+        <div class="enquiry-card">
+          <span class="eyebrow">QUICK ENQUIRY</span>
+          <h2 class="section-title">Send an Enquiry</h2>
+          <p class="section-subtitle">
+            Enter your <strong>Name</strong>, <strong>Email</strong>, <strong>WhatsApp Number</strong>, <strong>Source</strong>, and <strong>Destination</strong> below. We will send you an instant confirmation on <strong>WhatsApp</strong> and <strong>Email</strong>.
+          </p>
+
+          <form id="enquiryForm" novalidate>
+            <div class="form-group">
+              <label for="inputName">Full Name <span class="req">*</span></label>
+              <input
+                type="text"
+                id="inputName"
+                name="name"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="inputEmail">Email Address <span class="req">*</span></label>
+                <input
+                  type="email"
+                  id="inputEmail"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="inputNumber">WhatsApp Number <span class="req">*</span></label>
+                <input
+                  type="tel"
+                  id="inputNumber"
+                  name="number"
+                  placeholder="Enter 10-digit WhatsApp number"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="inputSource">Source (Pickup Location) <span class="req">*</span></label>
+                <input
+                  type="text"
+                  id="inputSource"
+                  name="source"
+                  placeholder="e.g. DD Nagar, Gwalior"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="inputDestination">Destination (Drop Location) <span class="req">*</span></label>
+                <input
+                  type="text"
+                  id="inputDestination"
+                  name="destination"
+                  placeholder="e.g. Agra / Delhi / Ujjain"
+                  required
+                />
+              </div>
+            </div>
+
+            <div id="formFeedback" class="form-feedback hidden"></div>
+
+            <div id="whatsappDispatchBox" class="wa-dispatch-box hidden">
+              <div class="wa-dispatch-header">
+                <strong>💬 WhatsApp &amp; Email Confirmation Sent to <span id="waTargetNumber"></span></strong>
+                <span class="wa-badge" id="waJobBadge">Sent ✓</span>
+              </div>
+              <pre class="wa-preview-text" id="waPreviewText"></pre>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener"
+                id="waDirectOpenBtn"
+                class="btn-whatsapp full-width"
+              >
+                💬 Open Message on WhatsApp Now ↗
+              </a>
+            </div>
+
+            <button type="submit" class="btn-primary full-width" id="submitEnquiryBtn">
+              Submit Enquiry &amp; Send WhatsApp + Email
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Office Location & Contact Section -->
+  <section class="section section-alt" id="location">
+    <div class="container">
+      <div class="section-header-center">
+        <span class="eyebrow">VISIT OR CONTACT US</span>
+        <h2 class="section-title">Office Location &amp; Contact Details</h2>
+      </div>
+
+      <div class="location-grid">
+        <div class="location-info-card">
+          <div class="contact-detail-block">
+            <div class="detail-icon">📍</div>
+            <div>
+              <h3>Office Location</h3>
+              <p>
+                <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" id="officeAddressText">
+                  AM-18, DD Nagar (Deendayal Nagar), In front of Bhadouriya Ground, Near Mangal Bhawan, Gwalior, Madhya Pradesh ↗
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-block">
+            <div class="detail-icon">💬</div>
+            <div>
+              <h3>WhatsApp &amp; Helpline Number</h3>
+              <p>
+                <a href="https://wa.me/918871724435" target="_blank" rel="noopener" id="officeWhatsappLink">+918871724435</a>
+                <span class="muted-sep">/</span>
+                <a href="tel:+918871724435" id="officePhoneLink">+918871724435</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="contact-detail-block">
+            <div class="detail-icon">✉️</div>
+            <div>
+              <h3>Email Address</h3>
+              <p>
+                <a href="mailto:pravin361f@gmail.com" id="officeEmailLink">pravin361f@gmail.com</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="location-cta-row">
+            <a
+              href="https://wa.me/918871724435"
+              target="_blank"
+              rel="noopener"
+              class="btn-whatsapp full-width"
+            >
+              💬 Chat on WhatsApp (+918871724435)
+            </a>
+            <a
+              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D"
+              target="_blank"
+              rel="noopener"
+              class="btn-outline full-width"
+            >
+              🗺️ Open Office Location in Google Maps
+            </a>
+          </div>
+        </div>
+
+        <div class="location-map-card">
+          <iframe
+            title="Mahalaxmi Tours and Travels Office Location — Gwalior, Madhya Pradesh"
+            src="https://www.google.com/maps?q=26.2566343,78.2131111+(Mahalaxmi+tours+and+travels)&z=17&output=embed"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 340px;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Minimal Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Mahalaxmi Tours and Travels</strong> · <a href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:#FBBF24; text-decoration:none;">📍 AM-18, DD Nagar, Gwalior, MP ↗</a>
+      </div>
+      <div class="footer-contacts">
+        <a href="https://wa.me/918871724435" target="_blank" rel="noopener">WhatsApp: +918871724435</a>
+        <span>·</span>
+        <a href="mailto:pravin361f@gmail.com">pravin361f@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

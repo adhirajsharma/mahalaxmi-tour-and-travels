@@ -1,0 +1,157 @@
+{
+  "brand": {
+    "name": "Mahalaxmi Tours and Travels",
+    "tagline": "Reliable Cab Rentals & Travel Services",
+    "domain": "mahalaxmitoursandtravels.in",
+    "dailyCapacity": 100,
+    "whatsappNumber": "+918871724435",
+    "alternatePhone": "+918871724435",
+    "email": "pravin361f@gmail.com",
+    "officeLocation": "AM-18, DD Nagar (Deendayal Nagar), In front of Bhadouriya Ground, Near Mangal Bhawan, Gwalior, Madhya Pradesh",
+    "officeShortLocation": "AM-18, DD Nagar, Maharajpura, Gwalior, MP",
+    "officeMapUrl": "https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z/data=!3m1!4b1!4m6!3m5!1s0x3976c1c0105cf1dd:0x3afc8ce3835dfdef!8m2!3d26.2566343!4d78.2131111!16s%2Fg%2F11jjv2zkmf?entry=ttu&g_ep=EgoyMDI2MTExMC4wIKXMDSoASAFQAw%3D%3D",
+    "coordinates": "26.2566343,78.2131111"
+  },
+  "fleet": [
+    {
+      "id": "swift-dzire",
+      "name": "Swift Dzire",
+      "category": "sedan",
+      "type": "Comfort AC Sedan",
+      "seating": "4 + 1 Seating",
+      "bags": "2 Bags",
+      "ratePerKm": 12,
+      "badge": "Popular Sedan",
+      "image": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=900&q=80",
+      "features": [
+        "Full AC",
+        "4 + 1 Passengers",
+        "2 Luggage Bags",
+        "No Hidden Charges"
+      ]
+    },
+    {
+      "id": "hyundai-aura",
+      "name": "Hyundai Aura",
+      "category": "sedan",
+      "type": "Premium AC Sedan",
+      "seating": "4 + 1 Seating",
+      "bags": "2 Bags",
+      "ratePerKm": 12,
+      "badge": "Best Value",
+      "image": "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&w=900&q=80",
+      "features": [
+        "Full AC",
+        "4 + 1 Passengers",
+        "2 Luggage Bags",
+        "Clean Interiors"
+      ]
+    },
+    {
+      "id": "maruti-ertiga",
+      "name": "Ertiga",
+      "category": "suv",
+      "type": "Family AC MUV",
+      "seating": "6 + 1 Seating",
+      "bags": "5 Bags",
+      "ratePerKm": 15,
+      "badge": "Family Choice",
+      "image": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=900&q=80",
+      "features": [
+        "Dual AC",
+        "6 + 1 Passengers",
+        "5 Luggage Bags",
+        "Spacious Cabin"
+      ]
+    },
+    {
+      "id": "kia-carens",
+      "name": "Kia Carens",
+      "category": "suv",
+      "type": "Premium AC MUV",
+      "seating": "6 + 1 Seating",
+      "bags": "4 Bags",
+      "ratePerKm": 16,
+      "badge": "Executive MUV",
+      "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=900&q=80",
+      "features": [
+        "Roof AC Vents",
+        "6 + 1 Passengers",
+        "4 Luggage Bags",
+        "Reclining Seats"
+      ]
+    },
+    {
+      "id": "innova-crysta",
+      "name": "Toyota Innova Crysta",
+      "category": "suv",
+      "type": "Luxury AC SUV",
+      "seating": "6 + 1 Seating",
+      "bags": "6 Bags",
+      "ratePerKm": 20,
+      "badge": "VIP Comfort",
+      "image": "https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?auto=format&fit=crop&w=900&q=80",
+      "features": [
+        "Captain Seats",
+        "6 + 1 Passengers",
+        "6 Luggage Bags",
+        "Highway Luxury"
+      ]
+    },
+    {
+      "id": "force-urbania",
+      "name": "Force Urbania",
+      "category": "van",
+      "type": "Luxury Group Van",
+      "seating": "16 + 1 Seating",
+      "bags": "10 Bags",
+      "ratePerKm": 35,
+      "badge": "Group Travel",
+      "image": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=900&q=80",
+      "features": [
+        "Full AC Van",
+        "16 + 1 Passengers",
+        "10 Luggage Bags",
+        "Pushback Seats"
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "name": "Test User",
+      "city": "Gwalior",
+      "car": "Swift Dzire (₹12/KM)",
+      "rating": 5,
+      "comment": "Excellent tour service!",
+      "createdAt": "2026-11-13T15:50:45.500Z"
+    },
+    {
+      "name": "Rahul & Priya Sharma",
+      "city": "Gwalior",
+      "car": "Swift Dzire (₹12/KM)",
+      "rating": 5,
+      "comment": "Very clean Swift Dzire and polite driver. Transparent ₹12/km pricing with zero hidden charges for our outstation trip!"
+    },
+    {
+      "name": "Sandeep Tomar",
+      "city": "Gwalior",
+      "car": "Toyota Innova Crysta (₹20/KM)",
+      "rating": 5,
+      "comment": "Picked us up right on time and the ride was super smooth. Instant confirmation on email and SMS."
+    },
+    {
+      "name": "Vikram Bhadoria & Family",
+      "city": "DD Nagar, Gwalior",
+      "car": "Force Urbania (₹35/KM)",
+      "rating": 5,
+      "comment": "Booked the 16+1 Force Urbania for our family group tour. Brand new vehicle, chilled AC, and very helpful team at the DD Nagar office."
+    },
+    {
+      "name": "Sneha & Aditya Verma",
+      "city": "Indore",
+      "car": "Kia Carens (₹16/KM)",
+      "rating": 5,
+      "comment": "Easy WhatsApp coordination on +918871724435 and very comfortable Kia Carens for airport transfer and sightseeing."
+    }
+  ]
+}
