@@ -1,11 +1,7 @@
 // Direct Async Notification Service (Email via Nodemailer & WhatsApp via Meta Official Cloud API)
 // Optimized for up to 100 daily users.
-let nodemailer = null;
-try {
-  nodemailer = require('nodemailer');
-} catch (err) {
-  console.error('[Nodemailer Load Error]', err && err.message ? err.message : err);
-}
+// Hard require — if nodemailer fails to load, error is visible in Netlify Function logs
+const nodemailer = require('nodemailer');
 
 const DAILY_USER_LIMIT = 100;
 const recentEnquiries = [];
@@ -193,7 +189,7 @@ async function sendEmailNotification(data) {
     }
   }
 
-  console.warn(`[Email Notice] Running in simulated mode. Missing credentials: nodemailer=${Boolean(nodemailer)}, smtpUser=${Boolean(smtpUser)}, smtpPass=${Boolean(smtpPass)}, smtpHost=${Boolean(smtpHost)}`);
+  console.warn(`[Email Notice] Running in simulated mode. Missing credentials: smtpUser=${Boolean(smtpUser)}, smtpPass=${Boolean(smtpPass)}, smtpHost=${Boolean(smtpHost)}. nodemailer loaded=${Boolean(nodemailer)}`);
   return {
     channel: 'email',
     provider: 'simulated-email',

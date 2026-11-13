@@ -1,7 +1,5 @@
-// Ensure nodemailer is explicitly bundled by Netlify esbuild
-try {
-  require('nodemailer');
-} catch (_) {}
+// nodemailer is externalized in netlify.toml — loaded at runtime from node_modules, not bundled
+// No need to pre-require here; notificationQueue.js does a hard require('nodemailer')
 
 const {
   buildGetDataResponse,

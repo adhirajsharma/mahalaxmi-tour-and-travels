@@ -11,10 +11,12 @@
   SECRETS_SCAN_OMIT_PATHS = "README.md,.env.example"
 
 [functions]
-  # Fast and reliable modern bundler
+  # Use esbuild but externalize nodemailer so it is NOT bundled
+  # (nodemailer uses dynamic require() internally which breaks esbuild)
   node_bundler = "esbuild"
   # Ensure the JSON data files are bundled inside the serverless function
-  included_files = ["data/**"]
+  included_files = ["data/**", "node_modules/nodemailer/**"]
+  external_node_modules = ["nodemailer"]
 
 # Rewrite all API calls to the serverless function
 [[redirects]]
