@@ -23,9 +23,9 @@
       </a>
 
       <nav class="main-nav" id="mainNav">
+        <a href="#enquiry" class="nav-link">Enquiry</a>
         <a href="#cars" class="nav-link">Fleet</a>
         <a href="#reviews" class="nav-link">Reviews</a>
-        <a href="#enquiry" class="nav-link">Enquiry</a>
         <a href="#location" class="nav-link">Contact</a>
       </nav>
 
@@ -39,9 +39,9 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a href="#enquiry" class="mobile-nav-link">📝 Send Booking Enquiry</a>
       <a href="#cars" class="mobile-nav-link">🚗 Car Fleet &amp; Tariff</a>
       <a href="#reviews" class="mobile-nav-link">⭐ Customer Reviews</a>
-      <a href="#enquiry" class="mobile-nav-link">📝 Book a Cab</a>
       <a href="#location" class="mobile-nav-link">📍 Contact &amp; Location</a>
     </div>
   </header>
@@ -107,127 +107,7 @@
     </div>
   </div>
 
-  <!-- 1. Car Fleet Section -->
-  <section class="section" id="cars">
-    <div class="container">
-      <div class="section-header reveal-up">
-        <div>
-          <span class="eyebrow">OUR FLEET</span>
-          <h2 class="section-title">Car Listing &amp; Per-KM Tariff</h2>
-        </div>
-
-        <div class="filter-tabs" id="carFilterTabs">
-          <button type="button" class="filter-tab active" data-category="all">All Cars</button>
-          <button type="button" class="filter-tab" data-category="sedan">Sedans (4+1)</button>
-          <button type="button" class="filter-tab" data-category="suv">MUV &amp; SUV (6+1)</button>
-          <button type="button" class="filter-tab" data-category="van">Luxury Van (16+1)</button>
-        </div>
-      </div>
-
-      <!-- Skeleton loaders (shown while fetching) -->
-      <div class="cars-grid" id="carsGrid">
-        <div class="car-skeleton"></div>
-        <div class="car-skeleton"></div>
-        <div class="car-skeleton"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 2. Reviews Section -->
-  <section class="section section-alt" id="reviews">
-    <div class="container">
-      <div class="section-header-center reveal-up">
-        <span class="eyebrow">CUSTOMER REVIEWS</span>
-        <h2 class="section-title">What Travelers Say</h2>
-        <p class="section-subtitle">Real experiences from real customers across India</p>
-      </div>
-
-      <div class="reviews-grid" id="reviewsGrid">
-        <div class="review-skeleton"></div>
-        <div class="review-skeleton"></div>
-        <div class="review-skeleton"></div>
-      </div>
-
-      <!-- Post a Review -->
-      <div class="post-review-wrapper reveal-up">
-        <div class="post-review-card">
-          <div class="post-review-header">
-            <div>
-              <span class="eyebrow">SHARE YOUR EXPERIENCE</span>
-              <h3>Post a Review</h3>
-            </div>
-            <a
-              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z"
-              target="_blank"
-              rel="noopener"
-              class="btn-outline"
-            >
-              ⭐ Rate on Google Maps ↗
-            </a>
-          </div>
-
-          <form id="reviewForm" novalidate>
-            <div class="form-row-3">
-              <div class="form-group">
-                <label for="revName">Your Name <span class="req">*</span></label>
-                <input type="text" id="revName" placeholder="e.g. Amit Sharma" autocomplete="name" required />
-              </div>
-
-              <div class="form-group">
-                <label for="revCity">Your City</label>
-                <input type="text" id="revCity" placeholder="e.g. Gwalior" autocomplete="address-level2" />
-              </div>
-
-              <div class="form-group">
-                <label for="revCar">Car Used</label>
-                <select id="revCar">
-                  <option value="Swift Dzire (₹12/KM)">Swift Dzire (₹12/KM)</option>
-                  <option value="Hyundai Aura (₹12/KM)">Hyundai Aura (₹12/KM)</option>
-                  <option value="Ertiga (₹15/KM)">Ertiga (₹15/KM)</option>
-                  <option value="Kia Carens (₹16/KM)">Kia Carens (₹16/KM)</option>
-                  <option value="Toyota Innova Crysta (₹20/KM)">Innova Crysta (₹20/KM)</option>
-                  <option value="Force Urbania (₹35/KM)">Force Urbania (₹35/KM)</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Interactive Star Rating -->
-            <div class="form-group">
-              <label>Your Rating <span class="req">*</span></label>
-              <div class="star-picker" id="starPicker" role="group" aria-label="Rating">
-                <button type="button" class="star-btn" data-val="1" aria-label="1 star">★</button>
-                <button type="button" class="star-btn" data-val="2" aria-label="2 stars">★</button>
-                <button type="button" class="star-btn active" data-val="3" aria-label="3 stars">★</button>
-                <button type="button" class="star-btn active" data-val="4" aria-label="4 stars">★</button>
-                <button type="button" class="star-btn active" data-val="5" aria-label="5 stars">★</button>
-              </div>
-              <input type="hidden" id="revRating" value="5" />
-            </div>
-
-            <div class="form-group">
-              <label for="revComment">Your Review <span class="req">*</span></label>
-              <textarea
-                id="revComment"
-                rows="3"
-                placeholder="Share your experience with our cab and driver…"
-                maxlength="400"
-                required
-              ></textarea>
-              <div class="char-counter"><span id="revCharCount">0</span>/400</div>
-            </div>
-
-            <div id="reviewFeedback" class="form-feedback hidden"></div>
-
-            <button type="submit" class="btn-primary" id="submitReviewBtn">
-              Post Review →
-            </button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 3. Enquiry Section -->
+  <!-- 1. Quick Enquiry Section (Above Car Fleet) -->
   <section class="section" id="enquiry">
     <div class="container">
       <div class="enquiry-wrapper">
@@ -332,6 +212,126 @@
             <button type="submit" class="btn-primary full-width submit-btn" id="submitEnquiryBtn">
               <span class="btn-label">Send Enquiry &amp; Confirm via WhatsApp + Email</span>
               <span class="btn-spinner hidden" aria-hidden="true"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Car Fleet Section -->
+  <section class="section section-alt" id="cars">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div>
+          <span class="eyebrow">OUR FLEET</span>
+          <h2 class="section-title">Car Listing &amp; Per-KM Tariff</h2>
+        </div>
+
+        <div class="filter-tabs" id="carFilterTabs">
+          <button type="button" class="filter-tab active" data-category="all">All Cars</button>
+          <button type="button" class="filter-tab" data-category="sedan">Sedans (4+1)</button>
+          <button type="button" class="filter-tab" data-category="suv">MUV &amp; SUV (6+1)</button>
+          <button type="button" class="filter-tab" data-category="van">Luxury Van (16+1)</button>
+        </div>
+      </div>
+
+      <!-- Skeleton loaders (shown while fetching) -->
+      <div class="cars-grid" id="carsGrid">
+        <div class="car-skeleton"></div>
+        <div class="car-skeleton"></div>
+        <div class="car-skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Reviews Section -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-header-center reveal-up">
+        <span class="eyebrow">CUSTOMER REVIEWS</span>
+        <h2 class="section-title">What Travelers Say</h2>
+        <p class="section-subtitle">Real experiences from real customers across India</p>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <div class="review-skeleton"></div>
+        <div class="review-skeleton"></div>
+        <div class="review-skeleton"></div>
+      </div>
+
+      <!-- Post a Review -->
+      <div class="post-review-wrapper reveal-up">
+        <div class="post-review-card">
+          <div class="post-review-header">
+            <div>
+              <span class="eyebrow">SHARE YOUR EXPERIENCE</span>
+              <h3>Post a Review</h3>
+            </div>
+            <a
+              href="https://www.google.com/maps/place/Mahalaxmi+tours+and+travels/@26.2566343,78.2131111,17z"
+              target="_blank"
+              rel="noopener"
+              class="btn-outline"
+            >
+              ⭐ Rate on Google Maps ↗
+            </a>
+          </div>
+
+          <form id="reviewForm" novalidate>
+            <div class="form-row-3">
+              <div class="form-group">
+                <label for="revName">Your Name <span class="req">*</span></label>
+                <input type="text" id="revName" placeholder="e.g. Amit Sharma" autocomplete="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="revCity">Your City</label>
+                <input type="text" id="revCity" placeholder="e.g. Gwalior" autocomplete="address-level2" />
+              </div>
+
+              <div class="form-group">
+                <label for="revCar">Car Used</label>
+                <select id="revCar">
+                  <option value="Swift Dzire (₹12/KM)">Swift Dzire (₹12/KM)</option>
+                  <option value="Hyundai Aura (₹12/KM)">Hyundai Aura (₹12/KM)</option>
+                  <option value="Ertiga (₹15/KM)">Ertiga (₹15/KM)</option>
+                  <option value="Kia Carens (₹16/KM)">Kia Carens (₹16/KM)</option>
+                  <option value="Toyota Innova Crysta (₹20/KM)">Innova Crysta (₹20/KM)</option>
+                  <option value="Force Urbania (₹35/KM)">Force Urbania (₹35/KM)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Interactive Star Rating -->
+            <div class="form-group">
+              <label>Your Rating <span class="req">*</span></label>
+              <div class="star-picker" id="starPicker" role="group" aria-label="Rating">
+                <button type="button" class="star-btn" data-val="1" aria-label="1 star">★</button>
+                <button type="button" class="star-btn" data-val="2" aria-label="2 stars">★</button>
+                <button type="button" class="star-btn active" data-val="3" aria-label="3 stars">★</button>
+                <button type="button" class="star-btn active" data-val="4" aria-label="4 stars">★</button>
+                <button type="button" class="star-btn active" data-val="5" aria-label="5 stars">★</button>
+              </div>
+              <input type="hidden" id="revRating" value="5" />
+            </div>
+
+            <div class="form-group">
+              <label for="revComment">Your Review <span class="req">*</span></label>
+              <textarea
+                id="revComment"
+                rows="3"
+                placeholder="Share your experience with our cab and driver…"
+                maxlength="400"
+                required
+              ></textarea>
+              <div class="char-counter"><span id="revCharCount">0</span>/400</div>
+            </div>
+
+            <div id="reviewFeedback" class="form-feedback hidden"></div>
+
+            <button type="submit" class="btn-primary" id="submitReviewBtn">
+              Post Review →
             </button>
           </form>
         </div>
