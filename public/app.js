@@ -117,6 +117,23 @@ function renderReviews(reviews) {
 document.addEventListener('DOMContentLoaded', () => {
   loadWebsiteData();
 
+  // Mobile Navigation Drawer Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+  if (mobileMenuBtn && mobileNavDrawer) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      mobileNavDrawer.classList.toggle('open');
+    });
+
+    mobileNavDrawer.querySelectorAll('.mobile-nav-link').forEach((link) => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        mobileNavDrawer.classList.remove('open');
+      });
+    });
+  }
+
   // Interactive Car Category Filtering
   document.getElementById('carFilterTabs').addEventListener('click', (e) => {
     const btn = e.target.closest('.filter-tab');

@@ -41,7 +41,7 @@
         </div>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" id="mainNav">
         <a href="#cars">Car Listing</a>
         <a href="#reviews">Reviews</a>
         <a href="#enquiry">Enquiry</a>
@@ -49,10 +49,28 @@
       </nav>
 
       <div class="nav-actions">
-        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp-sm">
+        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp-sm desktop-only">
           💬 WhatsApp
         </a>
-        <a href="#enquiry" class="btn-primary-sm">Send Enquiry</a>
+        <a href="#enquiry" class="btn-primary-sm">Enquiry</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <a href="#cars" class="mobile-nav-link">🚗 Car Listing &amp; Tariff</a>
+      <a href="#reviews" class="mobile-nav-link">⭐ Customer Reviews</a>
+      <a href="#enquiry" class="mobile-nav-link">📝 Send Booking Enquiry</a>
+      <a href="#location" class="mobile-nav-link">📍 Office Location &amp; Contact</a>
+      <div class="mobile-drawer-cta">
+        <a href="https://wa.me/918871724435" target="_blank" rel="noopener" class="btn-whatsapp full-width">
+          💬 WhatsApp: +918871724435
+        </a>
       </div>
     </div>
   </header>
@@ -383,6 +401,22 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Mobile Quick Action Bar (Visible only on mobile devices) -->
+  <aside class="mobile-bottom-bar" aria-label="Quick contact actions">
+    <a href="tel:+918871724435" class="mobile-bar-btn call-btn">
+      <span class="bar-icon">📞</span>
+      <span class="bar-label">Call Now</span>
+    </a>
+    <a href="https://wa.me/918871724435?text=Hello%20Mahalaxmi%20Tours%20and%20Travels,%20I%20want%20to%20enquire%20about%20a%20cab%20booking." target="_blank" rel="noopener" class="mobile-bar-btn wa-btn">
+      <span class="bar-icon">💬</span>
+      <span class="bar-label">WhatsApp</span>
+    </a>
+    <a href="#enquiry" class="mobile-bar-btn enquire-btn">
+      <span class="bar-icon">📝</span>
+      <span class="bar-label">Book Cab</span>
+    </a>
+  </aside>
 
   <script src="/app.js"></script>
 </body>
